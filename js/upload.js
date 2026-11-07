@@ -3,7 +3,7 @@ import {
   collection, addDoc, setDoc, doc, serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-const IMGBB_API_KEY = "PASTE_KEY_BARU_DI_SINI";
+const IMGBB_API_KEY = "648e8301dd4f0c4c9e6f56fbba55ffd0";
 const MAX_SIZE = 10 * 1024 * 1024;
 
 const uploadForm = document.getElementById("uploadForm");
@@ -59,7 +59,6 @@ uploadForm.addEventListener("submit", async (event) => {
           likes: 0
         });
 
-        // Simpan pautan padam ImgBB (hanya admin boleh baca)
         if (result.data.delete_url) {
           try {
             await setDoc(doc(db, "photoSecrets", photoRef.id), {
