@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+  --bg-ivory: #FDFBF7;
+  --card-cream: #FFFFFF;
+  --gold-accent: #C5A059;
+  --text-dark: #2C221E;
+  --text-muted: #6B5E55;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-ivory);
+  color: var(--text-dark);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px 15px;
+}
+
+/* BUTTON */
+
+.btn-gold {
+  background-color: var(--gold-accent);
+  color: #FFF;
+  border: none;
+  padding: 12px 28px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #a88442;
+}
+
+/* FORM */
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #D1C7BD;
+  border-radius: 8px;
+  background-color: #FFF;
+}
+
+/* GALLERY HEADER */
+
+.gallery-container {
+  max-width: 900px;
+  padding-top: 30px;
+}
+
+.gallery-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 22px;
+}
+
+/* INSTAGRAM GRID */
+
+.ig-feed {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3px;
+  width: 100%;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.ig-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.ig-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ig-card-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.ig-card-img:hover {
+  transform: scale(1.04);
+}
+
+.loading-text {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 30px 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .gallery-container {
+    padding: 20px 0;
+  }
+
+  .gallery-container h2,
+  .gallery-description,
+  .gallery-container .btn-gold {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .ig-feed {
+    gap: 2px;
+    margin-top: 25px;
+  }
+}
